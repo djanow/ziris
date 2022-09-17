@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="index.js"></script>
-  </head>
 
-  <body>
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="container">
     <video class="video1" width="400" controls>
-      <source
-        src="./assets/rose+zik.mp4"
-        type="video/mp4"
-      />
+      <source src="./assets/rose+zik.mp4" type="video/mp4" />
     </video>
 
     <video class="video2" width="400" controls>
-      <source
-        src="./assets/bleu.mp4"
-        type="video/mp4"
-      />
+      <source src="./assets/bleu.mp4" type="video/mp4" />
     </video>
 
     <video class="video3" width="400" controls>
-      <source
-        src="./assets/jaune.mp4"
-        type="video/mp4"
-      />
+      <source src="./assets/jaune.mp4" type="video/mp4" />
     </video>
 
     <video class="video4" width="400" controls>
-      <source
-        src="./assets/vert.mp4"
-        type="video/mp4"
-      />
+      <source src="./assets/vert.mp4" type="video/mp4" />
     </video>
-
-    <button onclick="switchTo(false)">-</button>
-    <button onclick="switchTo(true)">+</button>
+  </div>
+  <div class="action">
+    <input type="range" id="curseur" name="curseur"
+    min="0" max="4" step="0.1" value="0" oninput="switchVideo(this.value)">
+    <label id="labelCurseur" for="curseur">0</label>
     <button onclick="play()">start</button>
-  </body>
+  </div>
+</body>
+
 </html>
